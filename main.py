@@ -1,5 +1,6 @@
 import configparser
 import tweepy
+import pandas as pd
 
 # read config
 '''config = configparser.ConfigParser()
@@ -25,3 +26,14 @@ api = tweepy.API(auth)
 
 public_tweets = api.home_timeline()
 print(public_tweets)
+
+# create dataframe
+columns = ['Time', 'User', 'Tweet']
+
+data = []
+for tweet in public_tweets:
+    data.append([tweet.created_at, tweet.user.screen_name, tweet.text])
+
+df = pd.DataFrame(data, columns=columns)
+
+df.to_csv('tweets.csv',index=False)
