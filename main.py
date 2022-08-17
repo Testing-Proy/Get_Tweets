@@ -18,8 +18,6 @@ api_key_secret = 'Eb8Mtgp8Gb1fq7cygHA6PTfGHoVL7CZuihrGtHdglU19KF3Z1g'
 access_token = '326778044-GSTxUotcJkaU35jw0bWtBysZ6BsSF3FnS1aOcmNT'
 access_token_secret = 'WVZgeyixIs1EZTU5xdW9rJpJim5FOqRD6j35uW9eKzSW7'
 
-api_k = 'AKKDHEUI53672JHSHJSJNN27273'
-
 # authenticate
 auth = tweepy.OAuthHandler(api_key, api_key_secret)
 auth.set_access_token(access_token, access_token_secret)
